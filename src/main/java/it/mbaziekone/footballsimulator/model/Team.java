@@ -1,6 +1,8 @@
 package it.mbaziekone.footballsimulator.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,5 +27,8 @@ public class Team implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "nation_id")
 	private Nation nation;
+	
+	
+	private List<Player> players = new ArrayList<>();
 
 }
