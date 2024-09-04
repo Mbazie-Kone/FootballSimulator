@@ -29,5 +29,9 @@ public class Player implements Serializable {
 	private String preferredFoot;
 	
 	private BigDecimal annualSalary;
+	
+	private BigDecimal monthlySalary;
+	
+	private BigDecimal marketValue;
 
 }
