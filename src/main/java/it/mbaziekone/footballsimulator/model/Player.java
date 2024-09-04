@@ -13,6 +13,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.MapKeyColumn;
 import jakarta.persistence.Table;
 
 @Entity
@@ -50,7 +51,8 @@ public class Player implements Serializable {
 	@JoinColumn(name = "team_id")
 	private Team team;
 	
-	
+	@MapKeyColumn(name = "attribute_name")
+	@Column(name = "attribute_value")
 	private Map<String, Integer> attributes = new HashMap<>();
 
 }
