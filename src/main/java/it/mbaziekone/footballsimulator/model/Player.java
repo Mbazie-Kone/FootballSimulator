@@ -134,5 +134,12 @@ public class Player implements Serializable {
 	public void setAttributes(Map<String, Integer> attributes) {
 		this.attributes = attributes;
 	}
-	
+
+	public Nation getNationality() {
+		return nationality;
+	}
+
+	public void setNationality(Nation nationality) {
+		this.nationality = nationality;
+	}
 }
