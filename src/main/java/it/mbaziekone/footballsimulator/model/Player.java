@@ -53,6 +53,10 @@ public class Player implements Serializable {
 	@JoinColumn(name = "team_id")
 	private Team team;
 	
+	@ManyToOne
+	@JoinColumn(name = "nation_id")
+	private Nation nationality;
+	
 	@ElementCollection
 	@CollectionTable(name = "player_attributes", joinColumns = @JoinColumn(name="player_id"))
 	@MapKeyColumn(name = "attribute_name")
