@@ -3,6 +3,8 @@ package it.mbaziekone.footballsimulator.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -47,5 +49,8 @@ public class Player implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "team_id")
 	private Team team;
+	
+	
+	private Map<String, Integer> attributes = new HashMap<>();
 
 }
