@@ -57,7 +57,9 @@ public class PlayerController {
 	
 	@GetMapping("/nation/{nationId}")
     public List<Player> getPlayersByNation(@PathVariable Long nationId) {
+		
         Nation nation = nationService.getNationById(nationId);
+        
         return playerService.getPlayersByNationality(nation);
     }
 

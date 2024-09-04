@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import it.mbaziekone.footballsimulator.model.Nation;
 import it.mbaziekone.footballsimulator.model.Player;
 import it.mbaziekone.footballsimulator.model.Team;
 import it.mbaziekone.footballsimulator.repository.PlayerRepository;
@@ -31,5 +32,11 @@ public class PlayerServiceImpl implements PlayerService {
 	@Override
 	public void savePlayer(Player player) {
 		playerRepository.save(player);
+	}
+
+	@Override
+	public List<Player> getPlayersByNationality(Nation nation) {
+		
+		 return playerRepository.findByNationality(nation);
 	}
 }
