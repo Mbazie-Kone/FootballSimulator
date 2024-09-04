@@ -18,20 +18,19 @@ public class PlayerServiceImpl implements PlayerService {
 
 	@Override
 	public Player getPlayerById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+	
+		return playerRepository.findById(id).orElse(null);
 	}
 
 	@Override
 	public List<Player> getPlayersByTeam(Team team) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return playerRepository.findByTeam(team);
 	}
 
 	@Override
 	public void savePlayer(Player player) {
-		// TODO Auto-generated method stub
-
+		playerRepository.save(player);
 	}
 
 }
