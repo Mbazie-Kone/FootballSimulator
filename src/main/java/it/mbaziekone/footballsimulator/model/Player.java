@@ -6,7 +6,9 @@ import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
+import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -51,6 +53,8 @@ public class Player implements Serializable {
 	@JoinColumn(name = "team_id")
 	private Team team;
 	
+	@ElementCollection
+	@CollectionTable(name = "player_attributes", joinColumns = @JoinColumn(name="player_id"))
 	@MapKeyColumn(name = "attribute_name")
 	@Column(name = "attribute_value")
 	private Map<String, Integer> attributes = new HashMap<>();
