@@ -2,10 +2,13 @@ package it.mbaziekone.footballsimulator.service.impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import it.mbaziekone.footballsimulator.model.Player;
 import it.mbaziekone.footballsimulator.model.Team;
 import it.mbaziekone.footballsimulator.service.PlayerService;
 
+@Service
 public class PlayerServiceImpl implements PlayerService {
 
 	@Override
