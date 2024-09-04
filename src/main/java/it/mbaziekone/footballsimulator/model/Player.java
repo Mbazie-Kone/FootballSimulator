@@ -142,4 +142,8 @@ public class Player implements Serializable {
 	public void setNationality(Nation nationality) {
 		this.nationality = nationality;
 	}
+	
+	public String getNationalityName() {
+		return nationality != null ? nationality.getName() : "Unknown";
+	}
 }
