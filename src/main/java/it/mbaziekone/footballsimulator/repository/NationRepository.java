@@ -1,8 +1,9 @@
 package it.mbaziekone.footballsimulator.repository;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public class NationRepository {
+import it.mbaziekone.footballsimulator.model.Nation;
+
+public interface NationRepository extends JpaRepository<Nation, Long> {
 
 }
