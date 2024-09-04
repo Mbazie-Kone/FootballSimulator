@@ -59,4 +59,84 @@ public class Player implements Serializable {
 	@Column(name = "attribute_value")
 	private Map<String, Integer> attributes = new HashMap<>();
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getFistName() {
+		return fistName;
+	}
+
+	public void setFistName(String fistName) {
+		this.fistName = fistName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public LocalDate getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(LocalDate dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public String getPreferredFoot() {
+		return preferredFoot;
+	}
+
+	public void setPreferredFoot(String preferredFoot) {
+		this.preferredFoot = preferredFoot;
+	}
+
+	public BigDecimal getAnnualSalary() {
+		return annualSalary;
+	}
+
+	public void setAnnualSalary(BigDecimal annualSalary) {
+		this.annualSalary = annualSalary;
+	}
+
+	public BigDecimal getMonthlySalary() {
+		return monthlySalary;
+	}
+
+	public void setMonthlySalary(BigDecimal monthlySalary) {
+		this.monthlySalary = monthlySalary;
+	}
+
+	public BigDecimal getMarketValue() {
+		return marketValue;
+	}
+
+	public void setMarketValue(BigDecimal marketValue) {
+		this.marketValue = marketValue;
+	}
+
+	public Team getTeam() {
+		return team;
+	}
+
+	public void setTeam(Team team) {
+		this.team = team;
+	}
+
+	public Map<String, Integer> getAttributes() {
+		return attributes;
+	}
+
+	public void setAttributes(Map<String, Integer> attributes) {
+		this.attributes = attributes;
+	}
+	
 }
