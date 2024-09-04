@@ -59,14 +59,6 @@ public class Player implements Serializable {
 	@Column(name = "attribute_value")
 	private Map<String, Integer> attributes = new HashMap<>();
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
 	public String getFistName() {
 		return fistName;
 	}
