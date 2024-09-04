@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import it.mbaziekone.footballsimulator.model.Nation;
 import it.mbaziekone.footballsimulator.model.Player;
 import it.mbaziekone.footballsimulator.model.Team;
+import it.mbaziekone.footballsimulator.service.NationService;
 import it.mbaziekone.footballsimulator.service.PlayerService;
 
 @RestController
@@ -20,6 +22,9 @@ public class PlayerController {
 	
 	@Autowired
 	private PlayerService playerService;
+	
+	@Autowired
+	private NationService nationService;
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<Player> getPlayer(@PathVariable Long id) {
@@ -49,5 +54,11 @@ public class PlayerController {
 		
 		return ResponseEntity.ok(player);
 	}
+	
+	@GetMapping("/nation/{nationId}")
+    public List<Player> getPlayersByNation(@PathVariable Long nationId) {
+        Nation nation = nationService.getNationById(nationId);
+        return playerService.getPlayersByNationality(nation);
+    }
 
 }
