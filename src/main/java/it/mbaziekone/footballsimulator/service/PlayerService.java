@@ -1,5 +1,8 @@
 package it.mbaziekone.footballsimulator.service;
 
-public interface PlayerService {
+import it.mbaziekone.footballsimulator.model.Player;
 
+public interface PlayerService {
+	
+	public Player getPlayerById(Long id);
 }
