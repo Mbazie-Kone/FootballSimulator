@@ -50,6 +50,10 @@ public class PlayerController {
 	@PostMapping("/save")
 	public ResponseEntity<Player> savePlayer(@PathVariable Player player) {
 		
+		if (player.getNationality() != null && player.getNationality().getId() != null) {
+            Nation nation = nationService.getNationById(player.getNationality().getId());
+            player.setNationality(nation);
+		}
 		playerService.savePlayer(player);
 		
 		return ResponseEntity.ok(player);
