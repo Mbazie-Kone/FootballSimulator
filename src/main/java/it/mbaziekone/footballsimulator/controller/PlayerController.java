@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,11 +33,21 @@ public class PlayerController {
 		return ResponseEntity.ok(player);
 	}
 	
-	
+	@GetMapping("/team/{teamId}")
 	public List<Player> getPlayersByteam(@PathVariable Long teamId) {
 		
 		Team team = new Team();
 		team.setId(teamId);
+		
+		return playerService.getPlayersByTeam(team);
+	}
+	
+	@PostMapping("/save")
+	public ResponseEntity<Player> savePlayer(@PathVariable Player player) {
+		
+		playerService.savePlayer(player);
+		
+		return ResponseEntity.ok(player);
 	}
 
 }
