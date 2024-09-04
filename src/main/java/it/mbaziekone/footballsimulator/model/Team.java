@@ -55,7 +55,5 @@ public class Team implements Serializable {
 	public void setPlayers(List<Player> players) {
 		this.players = players;
 	}
-	
-	
 
 }
