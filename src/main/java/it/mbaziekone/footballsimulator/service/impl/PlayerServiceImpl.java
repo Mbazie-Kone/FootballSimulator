@@ -32,5 +32,4 @@ public class PlayerServiceImpl implements PlayerService {
 	public void savePlayer(Player player) {
 		playerRepository.save(player);
 	}
-
 }
