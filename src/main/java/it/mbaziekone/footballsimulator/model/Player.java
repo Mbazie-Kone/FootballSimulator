@@ -24,16 +24,22 @@ public class Player implements Serializable {
 	@Column(name = "first_name")
 	private String fistName;
 	
+	@Column(name = "last_name")
 	private String lastName;
 	
+	@Column(name = "date_of_birth")
 	private LocalDate dateOfBirth;
 	
+	@Column(name = "preffered_foot")
 	private String preferredFoot;
 	
+	@Column(name = "annual_salary")
 	private BigDecimal annualSalary;
 	
+	@Column(name = "first_name")
 	private BigDecimal monthlySalary;
 	
+	@Column(name = "first_name")
 	private BigDecimal marketValue;
 
 }
