@@ -1,6 +1,8 @@
 package it.mbaziekone.footballsimulator.model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,5 +23,11 @@ public class Player implements Serializable {
 	private String fistName;
 	
 	private String lastName;
+	
+	private LocalDate dateOfBirth;
+	
+	private String preferredFoot;
+	
+	private BigDecimal annualSalary;
 
 }
