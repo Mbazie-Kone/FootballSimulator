@@ -36,10 +36,10 @@ public class Player implements Serializable {
 	@Column(name = "annual_salary")
 	private BigDecimal annualSalary;
 	
-	@Column(name = "first_name")
+	@Column(name = "monthly_salary")
 	private BigDecimal monthlySalary;
 	
-	@Column(name = "first_name")
+	@Column(name = "market_value")
 	private BigDecimal marketValue;
 
 }
