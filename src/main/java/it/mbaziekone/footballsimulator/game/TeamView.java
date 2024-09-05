@@ -30,5 +30,8 @@ public class TeamView {
 		
 		TableColumn<Player, String> teamCol = new TableColumn<>("Team");
 		teamCol.setCellValueFactory(new PropertyValueFactory<>("teamName"));
+		
+		//
+		playerTable.getColumns().addAll(firstNameCol, lastNameCol, roleCol, teamCol);
 	}
 }
