@@ -1,6 +1,8 @@
 package it.mbaziekone.footballsimulator.game;
 
 import it.mbaziekone.footballsimulator.model.Player;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -33,5 +35,16 @@ public class TeamView {
 		
 		//
 		playerTable.getColumns().addAll(firstNameCol, lastNameCol, roleCol, teamCol);
+		
+		ObservableList<Player> playerList = FXCollections.observableArrayList(
+				// TO DO
+		);
+		
+		playerTable.setItems(playerList);
+		
+		// add layout
+		layout.getChildren().add(playerTable);
+		
+		return layout;
 	}
 }
