@@ -4,13 +4,19 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class MainUI extends Application {
 
 	@Override
-	public void start(Stage primaryStage) throws Exception {
+	public void start(Stage primaryStage) {
+		
+		StackPane splashLayout = new StackPane();
+		
+		Image logo = new Image();
 		
 		primaryStage.setTitle("Football Simulator");
 		
