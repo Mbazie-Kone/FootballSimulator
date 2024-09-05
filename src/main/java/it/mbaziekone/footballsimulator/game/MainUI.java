@@ -16,6 +16,7 @@ public class MainUI extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		
+		 // Creazione dello stack pane per contenere il logo e il nome del gioco
 		StackPane splashLayout = new StackPane();
 		
 		// game logo
@@ -31,7 +32,7 @@ public class MainUI extends Application {
 		// Aggiunta di logo e titolo allo StackPane
 		splashLayout.getChildren().addAll(logoView, gameTitle);
 		
-		
+		// Creazione della scena
 		Scene splashScene = new Scene(splashLayout, 800, 600);
 		
 		// Impostazione del colore di sfondo (nero in questo caso)
