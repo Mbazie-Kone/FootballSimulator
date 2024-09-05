@@ -37,9 +37,34 @@ public class MainMenu extends Application {
 		// Creazione della scena per il menù principale
 		Scene menuScene = new Scene(menuLayout, 800, 600);
 		
-		
+		// Imposta la scena sullo stage
 		primaryStage.setScene(menuScene);
 		primaryStage.show();
 	}
+	
+	// Metodo per avviare una nuova partita
+    private void startNewGame(Stage primaryStage) {
+        // Codice per iniziare una nuova partita
+        System.out.println("Start new game");
+        // Qui potresti passare a una nuova schermata o inizializzare i dati del gioco
+    }
+
+    // Metodo per continuare una partita precedente
+    private void continueGame(Stage primaryStage) {
+        // Codice per continuare una partita salvata
+        System.out.println("Load game");
+        // Qui potresti caricare i dati da un file di salvataggio
+    }
+
+    // Metodo per aprire le impostazioni del gioco
+    private void openSettings(Stage primaryStage) {
+        // Codice per aprire il menu delle impostazioni
+        System.out.println("Open settings");
+        // Qui puoi aprire una nuova finestra con le opzioni di impostazione
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 
 }
