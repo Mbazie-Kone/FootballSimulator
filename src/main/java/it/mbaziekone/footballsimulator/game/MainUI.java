@@ -2,6 +2,7 @@ package it.mbaziekone.footballsimulator.game;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
@@ -22,7 +23,8 @@ public class MainUI extends Application {
 		logoView.setFitWidth(300);
 		logoView.setFitHeight(300);
 		
-		primaryStage.setTitle("Football Simulator");
+		Label gameTitle = new Label("Football Simulator");
+		gameTitle.setStyle("-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: white;");
 		
 		// main layout
 		BorderPane mainLayout = new BorderPane();
