@@ -16,8 +16,16 @@ public class TeamView {
 		// table for players
 		TableView<Player> playerTable = new TableView<>();
 		
-		// table's column
+		
 		TableColumn<Player, String> firstNameCol = new TableColumn<>("First Name");
-		firstNameCol.setCellValueFactory(new PropertyValueFactory<>("firstname"));
+		firstNameCol.setCellValueFactory(new PropertyValueFactory<>("firstName"));
+		
+		
+		TableColumn<Player, String> lastNameCol = new TableColumn<>("Last Name");
+		lastNameCol.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+				
+		
+		TableColumn<Player, String> roleCol = new TableColumn<>("Role");
+		roleCol.setCellValueFactory(new PropertyValueFactory<>("role"));
 	}
 }
