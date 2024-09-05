@@ -1,6 +1,7 @@
 package it.mbaziekone.footballsimulator.game;
 
 import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.BorderPane;
@@ -36,6 +37,7 @@ public class MainUI extends Application {
 		mainLayout.setCenter(tabPane);
 		
 		// main scene
+		Scene scene = new Scene(mainLayout, 800, 600);
 		
 	}
 
