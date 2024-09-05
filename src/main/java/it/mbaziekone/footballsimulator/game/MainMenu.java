@@ -1,5 +1,7 @@
 package it.mbaziekone.footballsimulator.game;
 
-public class MainMenu {
+import javafx.application.Application;
+
+public class MainMenu extends Application {
 
 }
