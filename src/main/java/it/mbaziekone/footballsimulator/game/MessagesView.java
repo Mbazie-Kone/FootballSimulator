@@ -12,6 +12,10 @@ public class MessagesView {
 		Label message1 = new Label("Welcome to Football Simulator!");
 		
 		Label message2 = new Label("Your team has a new training session.");
+		
+		layout.getChildren().addAll(message1, message2);
+		
+		return layout;
 	
 	}
 
