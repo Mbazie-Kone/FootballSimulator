@@ -20,8 +20,8 @@ public class MainMenu extends Application {
 		newGameButton.setPrefWidth(200);
 		newGameButton.setOnAction(e -> startNewGame(primaryStage));
 		
-		
-		Button continueButton = new Button("New Game");
+		// Pulsante per continuare una partita precedente
+		Button continueButton = new Button("Continue");
 		
 	}
 
