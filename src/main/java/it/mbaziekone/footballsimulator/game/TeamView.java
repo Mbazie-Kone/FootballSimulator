@@ -27,5 +27,8 @@ public class TeamView {
 		
 		TableColumn<Player, String> roleCol = new TableColumn<>("Role");
 		roleCol.setCellValueFactory(new PropertyValueFactory<>("role"));
+		
+		TableColumn<Player, String> teamCol = new TableColumn<>("Team");
+		teamCol.setCellValueFactory(new PropertyValueFactory<>("teamName"));
 	}
 }
