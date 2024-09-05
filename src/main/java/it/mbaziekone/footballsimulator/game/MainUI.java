@@ -41,7 +41,13 @@ public class MainUI extends Application {
 		splashLayout.setStyle("-fx-background-color: black;");
 		
 		
-		FadeTransition fadeIn = new FadeTransition(Duration.seconds(3));
+		FadeTransition fadeIn = new FadeTransition(Duration.seconds(3), splashLayout);
+		fadeIn.setFromValue(0.0);
+		fadeIn.setToValue(1.0);
+		fadeIn.setOnFinished(e -> {
+			// Dopo l'animazione di fade-in, carichiamo il menù principale
+			showMainMenu(primaryStage);
+		});
 		
 		// main layout
 		BorderPane mainLayout = new BorderPane();
