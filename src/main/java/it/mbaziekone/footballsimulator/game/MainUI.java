@@ -19,6 +19,8 @@ public class MainUI extends Application {
 		
 		Image logo = new Image("file:logo.png");
 		ImageView logoView = new ImageView(logo);
+		logoView.setFitWidth(300);
+		logoView.setFitHeight(300);
 		
 		primaryStage.setTitle("Football Simulator");
 		
