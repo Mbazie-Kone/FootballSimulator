@@ -37,6 +37,9 @@ public class MainMenu extends Application {
 		// Creazione della scena per il menù principale
 		Scene menuScene = new Scene(menuLayout, 800, 600);
 		
+		
+		primaryStage.setScene(menuScene);
+		primaryStage.show();
 	}
 
 }
