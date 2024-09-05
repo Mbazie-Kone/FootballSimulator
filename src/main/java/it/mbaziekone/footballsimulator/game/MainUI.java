@@ -30,6 +30,9 @@ public class MainUI extends Application {
 		
 		Scene splashScene = new Scene(splashLayout, 800, 600);
 		
+		// Impostazione del colore di sfondo (nero in questo caso)
+		splashLayout.setStyle("-fx-background-color: black;");
+		
 		// main layout
 		BorderPane mainLayout = new BorderPane();
 		
