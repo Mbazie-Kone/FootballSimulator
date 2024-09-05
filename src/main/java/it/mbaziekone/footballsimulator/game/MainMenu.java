@@ -17,7 +17,7 @@ public class MainMenu extends Application {
 		
 		
 		Button newGameButton = new Button("New Game");
-		
+		newGameButton.setPrefWidth(200);
 	}
 
 }
