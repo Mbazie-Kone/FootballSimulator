@@ -53,6 +53,9 @@ public class MainUI extends Application {
 		primaryStage.setScene(splashScene);
 		primaryStage.show();
 		
+		// Avvia l'animazione
+		fadeIn.play();
+		
 		
 		// main layout
 		BorderPane mainLayout = new BorderPane();
