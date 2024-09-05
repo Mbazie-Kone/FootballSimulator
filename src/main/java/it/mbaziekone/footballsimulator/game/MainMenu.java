@@ -21,6 +21,8 @@ public class MainMenu extends Application {
 		newGameButton.setOnAction(e -> startNewGame(primaryStage));
 		
 		
+		Button continueButton = new Button("New Game");
+		
 	}
 
 }
