@@ -28,6 +28,8 @@ public class MainUI extends Application {
 		
 		splashLayout.getChildren().addAll(logoView, gameTitle);
 		
+		Scene splashScene = new Scene(splashLayout, 800, 600);
+		
 		// main layout
 		BorderPane mainLayout = new BorderPane();
 		
@@ -51,10 +53,7 @@ public class MainUI extends Application {
 		
 		mainLayout.setCenter(tabPane);
 		
-		// main scene
-		Scene scene = new Scene(mainLayout, 800, 600);
-		primaryStage.setScene(scene);
-		primaryStage.show();
+		
 		
 	}
 	
