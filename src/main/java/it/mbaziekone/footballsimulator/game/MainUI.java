@@ -1,7 +1,5 @@
 package it.mbaziekone.footballsimulator.game;
 
-import javax.swing.plaf.basic.BasicTabbedPaneUI.TabbedPaneLayout;
-
 import javafx.application.Application;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
@@ -15,18 +13,24 @@ public class MainUI extends Application {
 		
 		primaryStage.setTitle("Football Simulator");
 		
+		// principal layout
 		BorderPane mainLayout = new BorderPane();
 		
+		// create tabs (sheets)
 		TabPane tabPane = new TabPane();
 		
+		// team and player tab
 		Tab teamTab = new Tab("Team");
 		teamTab.setContent(TeamView.getTeamView());
 		
+		// tab for messages
 		Tab messagesTab = new Tab("Messages");
 		
+		// tab for player profile
 		Tab playerProfileTab = new Tab("Player Profile");
 		playerProfileTab.setContent(PlayerProfileView.getPlayerProfileView());
 		
+		// add sheets
 		tabPane.getTabs().addAll(messagesTab, teamTab, playerProfileTab);
 		
 		mainLayout.setCenter(tabPane);
