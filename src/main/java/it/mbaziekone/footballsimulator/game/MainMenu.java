@@ -25,10 +25,13 @@ public class MainMenu extends Application {
 		continueButton.setPrefWidth(200);
 		continueButton.setOnAction(e -> continueGame(primaryStage));
 		
-		// Pulsante per continuare una partita precedente
+		// Pulsante per le impostazioni
 		Button settingsButton = new Button("Settings");
 		settingsButton.setPrefWidth(200);
 		settingsButton.setOnAction(e -> openSettings(primaryStage));
+		
+		
+		menuLayout.getChildren().addAll(newGameButton, continueButton, settingsButton);
 		
 	}
 
