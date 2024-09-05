@@ -3,6 +3,7 @@ package it.mbaziekone.footballsimulator.game;
 import it.mbaziekone.footballsimulator.model.Player;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 
 public class TeamView {
@@ -17,5 +18,6 @@ public class TeamView {
 		
 		// table's column
 		TableColumn<Player, String> firstNameCol = new TableColumn<>("First Name");
+		firstNameCol.setCellValueFactory(new PropertyValueFactory<>("firstname"));
 	}
 }
