@@ -40,7 +40,7 @@ public class MainUI extends Application {
 		// Impostazione del colore di sfondo (nero in questo caso)
 		splashLayout.setStyle("-fx-background-color: black;");
 		
-		
+		// Animazione di dissolvenza (fade-in/fade-out)
 		FadeTransition fadeIn = new FadeTransition(Duration.seconds(3), splashLayout);
 		fadeIn.setFromValue(0.0);
 		fadeIn.setToValue(1.0);
