@@ -26,6 +26,8 @@ public class MainUI extends Application {
 		Label gameTitle = new Label("Football Simulator");
 		gameTitle.setStyle("-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: white;");
 		
+		splashLayout.getChildren().addAll(logoView, gameTitle);
+		
 		// main layout
 		BorderPane mainLayout = new BorderPane();
 		
