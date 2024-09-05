@@ -13,5 +13,10 @@ public class PlayerProfileView {
 		Label playerNPosition = new Label();
 		Label playerTeam = new Label();
 		Label playerSalary = new Label();
+		
+		// add layout details
+		layout.getChildren().addAll(playerName, playerNPosition, playerTeam, playerSalary);
+		
+		return layout;
 	}
 }
