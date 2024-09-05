@@ -12,37 +12,37 @@ public class MainMenu extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		
-		// Layout principale (VBox con allineamento centrale)
+		// "Main layout (VBox with center alignment)"
 		VBox menuLayout = new VBox(20);
 		menuLayout.setAlignment(Pos.CENTER);
 		
-		// Pulsante per iniziare una nuova partita
+		// Button to start a new game
 		Button newGameButton = new Button("New Game");
 		newGameButton.setPrefWidth(200);
 		newGameButton.setOnAction(e -> startNewGame(primaryStage));
 		
-		// Pulsante per continuare una partita precedente
+		// Button to continue a previous game
 		Button continueButton = new Button("Continue");
 		continueButton.setPrefWidth(200);
 		continueButton.setOnAction(e -> continueGame(primaryStage));
 		
-		// Pulsante per le impostazioni
+		// Button for settings
 		Button settingsButton = new Button("Settings");
 		settingsButton.setPrefWidth(200);
 		settingsButton.setOnAction(e -> openSettings(primaryStage));
 		
-		// Aggiungi tutti i pulsanti al layout
+		// "Add all buttons to the layout"
 		menuLayout.getChildren().addAll(newGameButton, continueButton, settingsButton);
 		
-		// Creazione della scena per il menù principale
+		// "Creation of the main menu scene"
 		Scene menuScene = new Scene(menuLayout, 800, 600);
 		
-		// Imposta la scena sullo stage
+		// "Set the scene on the stage"
 		primaryStage.setScene(menuScene);
 		primaryStage.show();
 	}
 	
-	// Metodo per avviare una nuova partita
+	// Method to start a new game
     private void startNewGame(Stage primaryStage) {
         // Codice per iniziare una nuova partita
         System.out.println("Start new game");
