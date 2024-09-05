@@ -10,6 +10,7 @@ public class MainMenu extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		
+		// Layout principale (VBox con allineamento centrale)
 		VBox menuLayout = new VBox(20);
 		menuLayout.setAlignment(Pos.CENTER);
 		
