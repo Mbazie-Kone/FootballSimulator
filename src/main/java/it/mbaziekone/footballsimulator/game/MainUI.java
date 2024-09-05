@@ -1,5 +1,6 @@
 package it.mbaziekone.footballsimulator.game;
 
+import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -10,6 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class MainUI extends Application {
 
@@ -37,6 +39,9 @@ public class MainUI extends Application {
 		
 		// Impostazione del colore di sfondo (nero in questo caso)
 		splashLayout.setStyle("-fx-background-color: black;");
+		
+		
+		FadeTransition fadeIn = new FadeTransition(Duration.seconds(3));
 		
 		// main layout
 		BorderPane mainLayout = new BorderPane();
