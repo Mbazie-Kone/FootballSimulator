@@ -2,6 +2,7 @@ package it.mbaziekone.footballsimulator.game;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -30,8 +31,10 @@ public class MainMenu extends Application {
 		settingsButton.setPrefWidth(200);
 		settingsButton.setOnAction(e -> openSettings(primaryStage));
 		
-		
+		// Aggiungi tutti i pulsanti al layout
 		menuLayout.getChildren().addAll(newGameButton, continueButton, settingsButton);
+		
+		Scene menuScene = new Scene(menuLayout, 800, 600);
 		
 	}
 
