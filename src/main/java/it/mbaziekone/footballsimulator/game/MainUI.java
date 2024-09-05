@@ -3,6 +3,7 @@ package it.mbaziekone.footballsimulator.game;
 import javax.swing.plaf.basic.BasicTabbedPaneUI.TabbedPaneLayout;
 
 import javafx.application.Application;
+import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -17,6 +18,8 @@ public class MainUI extends Application {
 		BorderPane mainLayout = new BorderPane();
 		
 		TabPane tabPane = new TabPane();
+		
+		Tab teamTab = new Tab("Team");
 	}
 
 }
