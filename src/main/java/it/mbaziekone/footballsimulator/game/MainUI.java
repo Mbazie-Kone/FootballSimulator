@@ -20,12 +20,14 @@ public class MainUI extends Application {
 		TabPane tabPane = new TabPane();
 		
 		Tab teamTab = new Tab("Team");
-		teamTab.setContent(TeamVie);
+		teamTab.setContent(TeamView.getTeamView());
 		
 		Tab messagesTab = new Tab("Messages");
 		
 		Tab playerProfileTab = new Tab("Player Profile");
-		playerProfileTab.setContent(tabPane);
+		playerProfileTab.setContent();
+		
+		
 	}
 
 }
