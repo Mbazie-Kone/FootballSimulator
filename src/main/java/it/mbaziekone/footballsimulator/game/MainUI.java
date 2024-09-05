@@ -38,6 +38,8 @@ public class MainUI extends Application {
 		
 		// main scene
 		Scene scene = new Scene(mainLayout, 800, 600);
+		primaryStage.setScene(scene);
+		primaryStage.show();
 		
 	}
 
