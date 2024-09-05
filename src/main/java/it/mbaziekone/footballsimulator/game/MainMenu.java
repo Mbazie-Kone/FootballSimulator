@@ -22,6 +22,8 @@ public class MainMenu extends Application {
 		
 		// Pulsante per continuare una partita precedente
 		Button continueButton = new Button("Continue");
+		continueButton.setPrefWidth(200);
+		continueButton.setOnAction(e -> continueGame(primaryStage));
 		
 	}
 
