@@ -25,7 +25,11 @@ public class MainUI extends Application {
 		Tab messagesTab = new Tab("Messages");
 		
 		Tab playerProfileTab = new Tab("Player Profile");
-		playerProfileTab.setContent();
+		playerProfileTab.setContent(PlayerProfileView.getPlayerProfileView());
+		
+		tabPane.getTabs().addAll(messagesTab, teamTab, playerProfileTab);
+		
+		mainLayout.setCenter(tabPane);
 		
 		
 	}
