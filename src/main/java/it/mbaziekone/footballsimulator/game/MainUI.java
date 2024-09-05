@@ -49,6 +49,11 @@ public class MainUI extends Application {
 			showMainMenu(primaryStage);
 		});
 		
+		 // Mostra la scena di avvio
+		primaryStage.setScene(splashScene);
+		primaryStage.show();
+		
+		
 		// main layout
 		BorderPane mainLayout = new BorderPane();
 		
