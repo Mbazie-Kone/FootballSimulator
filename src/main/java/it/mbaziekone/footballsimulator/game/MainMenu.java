@@ -2,6 +2,7 @@ package it.mbaziekone.footballsimulator.game;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
+import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -13,6 +14,9 @@ public class MainMenu extends Application {
 		// Layout principale (VBox con allineamento centrale)
 		VBox menuLayout = new VBox(20);
 		menuLayout.setAlignment(Pos.CENTER);
+		
+		
+		Button newGameButton = new Button("New Game");
 		
 	}
 
