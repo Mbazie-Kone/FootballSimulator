@@ -22,7 +22,7 @@ public class MainUI extends Application {
 		StackPane splashLayout = new StackPane();
 		
 		// game logo
-		Image logo = new Image("file:logo.png");
+		Image logo = new Image("file:logo.png"); // Inserisci il percorso del logo
 		ImageView logoView = new ImageView(logo);
 		logoView.setFitWidth(300);
 		logoView.setFitHeight(300);
@@ -55,33 +55,12 @@ public class MainUI extends Application {
 		
 		// Avvia l'animazione
 		fadeIn.play();
+			
+	}
+	
+	public void showMainMenu(Stage primaryStage) {
 		
-		
-		// main layout
-		BorderPane mainLayout = new BorderPane();
-		
-		// create tabs (sheets)
-		TabPane tabPane = new TabPane();
-		
-		// team and player tab
-		Tab teamTab = new Tab("Team");
-		teamTab.setContent(TeamView.getTeamView());
-		
-		// tab for messages
-		Tab messagesTab = new Tab("Messages");
-		messagesTab.setContent(MessagesView.getMessagesView());
-		
-		// tab for player profile
-		Tab playerProfileTab = new Tab("Player Profile");
-		playerProfileTab.setContent(PlayerProfileView.getPlayerProfileView());
-		
-		// add sheets
-		tabPane.getTabs().addAll(messagesTab, teamTab, playerProfileTab);
-		
-		mainLayout.setCenter(tabPane);
-		
-		
-		
+		MainMenu
 	}
 	
 	public static void main(String[] args) {
