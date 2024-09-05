@@ -15,9 +15,12 @@ public class MainMenu extends Application {
 		VBox menuLayout = new VBox(20);
 		menuLayout.setAlignment(Pos.CENTER);
 		
-		
+		// Pulsante per iniziare una nuova partita
 		Button newGameButton = new Button("New Game");
 		newGameButton.setPrefWidth(200);
+		newGameButton.setOnAction(e -> startNewGame(primaryStage));
+		
+		
 	}
 
 }
