@@ -13,7 +13,7 @@ public class MainUI extends Application {
 		
 		primaryStage.setTitle("Football Simulator");
 		
-		// principal layout
+		// main layout
 		BorderPane mainLayout = new BorderPane();
 		
 		// create tabs (sheets)
@@ -35,6 +35,7 @@ public class MainUI extends Application {
 		
 		mainLayout.setCenter(tabPane);
 		
+		// main scene
 		
 	}
 
