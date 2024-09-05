@@ -26,6 +26,7 @@ public class MainUI extends Application {
 		
 		// tab for messages
 		Tab messagesTab = new Tab("Messages");
+		messagesTab.setContent(MessagesView.getMessagesView());
 		
 		// tab for player profile
 		Tab playerProfileTab = new Tab("Player Profile");
