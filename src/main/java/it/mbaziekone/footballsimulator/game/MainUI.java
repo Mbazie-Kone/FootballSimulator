@@ -18,15 +18,19 @@ public class MainUI extends Application {
 		
 		StackPane splashLayout = new StackPane();
 		
+		// game logo
 		Image logo = new Image("file:logo.png");
 		ImageView logoView = new ImageView(logo);
 		logoView.setFitWidth(300);
 		logoView.setFitHeight(300);
 		
+		// game name
 		Label gameTitle = new Label("Football Simulator");
 		gameTitle.setStyle("-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: white;");
 		
+		// Aggiunta di logo e titolo allo StackPane
 		splashLayout.getChildren().addAll(logoView, gameTitle);
+		
 		
 		Scene splashScene = new Scene(splashLayout, 800, 600);
 		
