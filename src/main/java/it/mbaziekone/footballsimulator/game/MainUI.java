@@ -4,11 +4,8 @@ import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -60,7 +57,8 @@ public class MainUI extends Application {
 	
 	public void showMainMenu(Stage primaryStage) {
 		
-		MainMenu
+		MainMenu mainMenu = new MainMenu();
+		mainMenu.start(primaryStage);
 	}
 	
 	public static void main(String[] args) {
