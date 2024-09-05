@@ -15,11 +15,11 @@ public class MainUI extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		
-		 // Creazione dello stack pane per contenere il logo e il nome del gioco
+		// Creation of the stack pane to contain the logo and the game name
 		StackPane splashLayout = new StackPane();
 		
 		// game logo
-		Image logo = new Image("file:logo.png"); // Inserisci il percorso del logo
+		Image logo = new Image("file:logo.png"); // "Insert the path to the logo"
 		ImageView logoView = new ImageView(logo);
 		logoView.setFitWidth(300);
 		logoView.setFitHeight(300);
@@ -28,29 +28,29 @@ public class MainUI extends Application {
 		Label gameTitle = new Label("Football Simulator");
 		gameTitle.setStyle("-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: white;");
 		
-		// Aggiunta di logo e titolo allo StackPane
+		// Added logo and title to the StackPane
 		splashLayout.getChildren().addAll(logoView, gameTitle);
 		
-		// Creazione della scena
+		// Creation of the scene
 		Scene splashScene = new Scene(splashLayout, 800, 600);
 		
-		// Impostazione del colore di sfondo (nero in questo caso)
+		// Setting the background color (black in this case)
 		splashLayout.setStyle("-fx-background-color: black;");
 		
-		// Animazione di dissolvenza (fade-in/fade-out)
+		// Fade-in/fade-out animation
 		FadeTransition fadeIn = new FadeTransition(Duration.seconds(3), splashLayout);
 		fadeIn.setFromValue(0.0);
 		fadeIn.setToValue(1.0);
 		fadeIn.setOnFinished(e -> {
-			// Dopo l'animazione di fade-in, carichiamo il menù principale
+			// After the fade-in animation, load the main menu
 			showMainMenu(primaryStage);
 		});
 		
-		 // Mostra la scena di avvio
+		// Display the startup scene
 		primaryStage.setScene(splashScene);
 		primaryStage.show();
 		
-		// Avvia l'animazione
+		// Start the animation
 		fadeIn.play();
 			
 	}
