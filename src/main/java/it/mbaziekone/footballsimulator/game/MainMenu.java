@@ -34,6 +34,7 @@ public class MainMenu extends Application {
 		// Aggiungi tutti i pulsanti al layout
 		menuLayout.getChildren().addAll(newGameButton, continueButton, settingsButton);
 		
+		// Creazione della scena per il menù principale
 		Scene menuScene = new Scene(menuLayout, 800, 600);
 		
 	}
