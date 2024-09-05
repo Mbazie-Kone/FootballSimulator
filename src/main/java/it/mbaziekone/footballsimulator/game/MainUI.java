@@ -23,6 +23,8 @@ public class MainUI extends Application {
 		teamTab.setContent(TeamVie);
 		
 		Tab messagesTab = new Tab("Messages");
+		
+		Tab playerProfileTab = new Tab("Player Profile");
 	}
 
 }
