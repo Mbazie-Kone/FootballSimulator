@@ -55,10 +55,10 @@ public class MainUI extends Application {
 			
 	}
 	
+	// Metodo per visualizzare il menù principale
 	public void showMainMenu(Stage primaryStage) {
-		
 		MainMenu mainMenu = new MainMenu();
-		mainMenu.start(primaryStage);
+		mainMenu.start(primaryStage); // Mostra il menù principale dopo l'animazione
 	}
 	
 	public static void main(String[] args) {
