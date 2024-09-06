@@ -13,8 +13,8 @@ public enum TechnicalAttribute {
 
     private final String attributeName;
 
-    TechnicalAttribute(String physical) {
-        this.attributeName = physical;
+    TechnicalAttribute(String attributeName) {
+        this.attributeName = attributeName;
     }
 
     public String getAttributeName() {
