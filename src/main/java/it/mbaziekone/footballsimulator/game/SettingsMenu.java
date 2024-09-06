@@ -34,4 +34,9 @@ public class SettingsMenu {
 		primaryStage.setScene(settingsScene);
 		primaryStage.show();
 	}
+	
+	private void returnToMenu(Stage primaryStage) {
+		MainMenu mainMenu = new MainMenu();
+		mainMenu.start(primaryStage); // Torna al menù principale
+	}
 }
