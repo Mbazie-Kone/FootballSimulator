@@ -71,22 +71,22 @@ public class Player implements Serializable {
 	// Technical attributes
 	@ElementCollection
     @CollectionTable(name = "technical_attributes", joinColumns = @JoinColumn(name = "player_id"))
-    @MapKeyColumn(name = "technique")
-    @Column(name = "technique_value")
+    @MapKeyColumn(name = "attribute_name")
+    @Column(name = "attribute_value")
     private Map<TechnicalAttribute, Integer> technicalAttributes = new EnumMap<>(TechnicalAttribute.class);
 	
 	// Mental attributes
 	@ElementCollection
     @CollectionTable(name = "mental_attributes", joinColumns = @JoinColumn(name = "player_id"))
-    @MapKeyColumn(name = "mental")
-    @Column(name = "mental_value")
+    @MapKeyColumn(name = "attribute_name")
+    @Column(name = "attribute_value")
     private Map<MentalAttribute, Integer> mentalAttributes = new EnumMap<>(MentalAttribute.class);
 	
 	// Physical attributes
 	@ElementCollection
     @CollectionTable(name = "physical_attributes", joinColumns = @JoinColumn(name = "player_id"))
-    @MapKeyColumn(name = "physical")
-    @Column(name = "physical_value")
+    @MapKeyColumn(name = "attribute_name")
+    @Column(name = "attribute_value")
     private Map<PhysicalAttribute, Integer> physicalAttributes = new EnumMap<>(PhysicalAttribute.class);
 		
 	// Getters and Setters
