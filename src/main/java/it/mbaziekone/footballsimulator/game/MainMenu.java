@@ -44,22 +44,22 @@ public class MainMenu extends Application {
 	
 	// Method to start a new game
     private void startNewGame(Stage primaryStage) {
-        // Codice per iniziare una nuova partita
-        System.out.println("Start new game");
+        // Code to start a new game
+        
         
     }
 
-    // Metodo per continuare una partita precedente
+    // Method to continue a previous game
     private void continueGame(Stage primaryStage) {
-        // Codice per continuare una partita salvata
-        System.out.println("Load game");
+        // Code to continue a saved game
+       
         
     }
 
-    // Metodo per aprire le impostazioni del gioco
+    // Method to open the game settings
     private void openSettings(Stage primaryStage) {
-        // Codice per aprire il menu delle impostazioni
-        System.out.println("Open settings");
+        // Code to open the settings menu
+        
      
     }
 
