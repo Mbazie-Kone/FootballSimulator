@@ -19,7 +19,7 @@ import jakarta.persistence.MapKeyColumn;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "palyers")
+@Table(name = "players")
 public class Player implements Serializable {
 
 	private static final long serialVersionUID = 1L;
