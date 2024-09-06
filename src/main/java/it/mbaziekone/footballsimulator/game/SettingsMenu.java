@@ -1,6 +1,7 @@
 package it.mbaziekone.footballsimulator.game;
 
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
@@ -23,7 +24,9 @@ public class SettingsMenu {
 		Button backButton = new Button("Return to menu");
 		backButton.setOnAction(e -> returnToMenu(primaryStage));
 		
-		
+		// Aggiungi tutto al layout
 		settingsLayout.getChildren().addAll(volumeLabel, volumeSlider, backButton);
+		
+		Scene settingsScene = new Scene(settingsLayout, 800, 600);
 	}
 }
