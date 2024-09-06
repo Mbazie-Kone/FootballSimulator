@@ -7,6 +7,7 @@ import java.util.EnumMap;
 import java.util.Map;
 
 import it.mbaziekone.footballsimulator.game.PlayerRole;
+import it.mbaziekone.footballsimulator.game.TechnicalAttribute;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
@@ -58,11 +59,19 @@ public class Player implements Serializable {
 	@JoinColumn(name = "nation_id")
 	private Nation nationality;
 	
+	// Roles
 	@ElementCollection
 	@CollectionTable(name = "player_roles", joinColumns = @JoinColumn(name="player_id"))
 	@MapKeyColumn(name = "role")
 	@Column(name = "role_value")
 	private Map<PlayerRole, Integer> roles = new EnumMap<>(PlayerRole.class);
+	
+	// Mental attribute
+	@ElementCollection
+    @CollectionTable(name = "technical_attributes", joinColumns = @JoinColumn(name = "player_id"))
+    @MapKeyColumn(name = "attribute_name")
+    @Column(name = "attribute_value")
+    private Map<TechnicalAttribute, Integer> technicalAttributes = new EnumMap<>(TechnicalAttribute.class);
 
 	public String getFirstName() {
 		return firstName;
