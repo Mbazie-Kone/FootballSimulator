@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -48,7 +49,7 @@ public class PlayerController {
 	}
 	
 	@PostMapping("/save")
-	public ResponseEntity<Player> savePlayer(@PathVariable Player player) {
+	public ResponseEntity<Player> savePlayer(@RequestBody Player player) {
 		
 		if (player.getNationality() != null && player.getNationality().getId() != null) {
             Nation nation = nationService.getNationById(player.getNationality().getId());
