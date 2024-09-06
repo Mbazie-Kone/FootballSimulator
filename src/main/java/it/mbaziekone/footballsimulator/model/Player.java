@@ -37,7 +37,7 @@ public class Player implements Serializable {
 	@Column(name = "date_of_birth")
 	private LocalDate dateOfBirth;
 	
-	@Column(name = "preffered_foot")
+	@Column(name = "preferred_foot")
 	private String preferredFoot;
 	
 	@Column(name = "annual_salary")
