@@ -27,6 +27,11 @@ public class SettingsMenu {
 		// Aggiungi tutto al layout
 		settingsLayout.getChildren().addAll(volumeLabel, volumeSlider, backButton);
 		
+		// Creazione della scena per le impostazioni
 		Scene settingsScene = new Scene(settingsLayout, 800, 600);
+		
+		// Imposta la scena sullo stage
+		primaryStage.setScene(settingsScene);
+		primaryStage.show();
 	}
 }
