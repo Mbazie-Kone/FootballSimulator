@@ -3,9 +3,10 @@ package it.mbaziekone.footballsimulator.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
+import it.mbaziekone.footballsimulator.game.PlayerRole;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
@@ -58,16 +59,16 @@ public class Player implements Serializable {
 	private Nation nationality;
 	
 	@ElementCollection
-	@CollectionTable(name = "player_attributes", joinColumns = @JoinColumn(name="player_id"))
-	@MapKeyColumn(name = "attribute_name")
-	@Column(name = "attribute_value")
-	private Map<String, Integer> attributes = new HashMap<>();
+	@CollectionTable(name = "player_roles", joinColumns = @JoinColumn(name="player_id"))
+	@MapKeyColumn(name = "role")
+	@Column(name = "role_value")
+	private Map<PlayerRole, Integer> roles = new EnumMap<>(PlayerRole.class);
 
-	public String getFistName() {
+	public String getFirstName() {
 		return firstName;
 	}
 
-	public void setFistName(String firstName) {
+	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
@@ -127,14 +128,6 @@ public class Player implements Serializable {
 		this.team = team;
 	}
 
-	public Map<String, Integer> getAttributes() {
-		return attributes;
-	}
-
-	public void setAttributes(Map<String, Integer> attributes) {
-		this.attributes = attributes;
-	}
-
 	public Nation getNationality() {
 		return nationality;
 	}
@@ -146,4 +139,13 @@ public class Player implements Serializable {
 	public String getNationalityName() {
 		return nationality != null ? nationality.getName() : "Unknown";
 	}
+
+	public Map<PlayerRole, Integer> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(Map<PlayerRole, Integer> roles) {
+		this.roles = roles;
+	}
+	
 }
