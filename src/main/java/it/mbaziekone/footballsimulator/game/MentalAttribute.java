@@ -11,7 +11,8 @@ public enum MentalAttribute {
     OFF_THE_BALL("Off The Ball"),
     POSITIONING("Positioning"),
     DECISION_MAKING("Decision Making"),
-    COMPOSURE("Composure");
+    COMPOSURE("Composure"),
+	CONCENTRATION("Concentration");
 
     private final String attributeName;
 
