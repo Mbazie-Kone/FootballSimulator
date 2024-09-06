@@ -173,5 +173,29 @@ public class Player implements Serializable {
 	public void setRoles(Map<PlayerRole, Integer> roles) {
 		this.roles = roles;
 	}
+
+	public Map<TechnicalAttribute, Integer> getTechnicalAttributes() {
+		return technicalAttributes;
+	}
+
+	public void setTechnicalAttributes(Map<TechnicalAttribute, Integer> technicalAttributes) {
+		this.technicalAttributes = technicalAttributes;
+	}
+
+	public Map<MentalAttribute, Integer> getMentalAttributes() {
+		return mentalAttributes;
+	}
+
+	public void setMentalAttributes(Map<MentalAttribute, Integer> mentalAttributes) {
+		this.mentalAttributes = mentalAttributes;
+	}
+
+	public Map<PhysicalAttribute, Integer> getPhysicalAttributes() {
+		return physicalAttributes;
+	}
+
+	public void setPhysicalAttributes(Map<PhysicalAttribute, Integer> physicalAttributes) {
+		this.physicalAttributes = physicalAttributes;
+	}
 	
 }
