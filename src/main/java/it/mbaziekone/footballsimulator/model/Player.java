@@ -66,8 +66,8 @@ public class Player implements Serializable {
 	// Roles
 	@ElementCollection
 	@CollectionTable(name = "player_roles", joinColumns = @JoinColumn(name="player_id"))
-	@MapKeyColumn(name = "attribute_name")
-	@Column(name = "attribute_value")
+	@MapKeyColumn(name = "role_name")
+	@Column(name = "role_value")
 	private Map<PlayerRole, Integer> roles = new EnumMap<>(PlayerRole.class);
 	
 	// Technical attributes
