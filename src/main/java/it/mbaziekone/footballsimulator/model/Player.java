@@ -14,6 +14,8 @@ import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -65,6 +67,7 @@ public class Player implements Serializable {
 	@ElementCollection
 	@CollectionTable(name = "player_roles", joinColumns = @JoinColumn(name="player_id"))
 	@MapKeyColumn(name = "role_name")
+	@Enumerated(EnumType.STRING)
 	@Column(name = "role_value")
 	private Map<PlayerRole, Integer> roles = new EnumMap<>(PlayerRole.class);
 	
@@ -72,6 +75,7 @@ public class Player implements Serializable {
 	@ElementCollection
     @CollectionTable(name = "technical_attributes", joinColumns = @JoinColumn(name = "player_id"))
     @MapKeyColumn(name = "attribute_name")
+	@Enumerated(EnumType.STRING)
     @Column(name = "attribute_value")
     private Map<TechnicalAttribute, Integer> technicalAttributes = new EnumMap<>(TechnicalAttribute.class);
 	
@@ -79,6 +83,7 @@ public class Player implements Serializable {
 	@ElementCollection
     @CollectionTable(name = "mental_attributes", joinColumns = @JoinColumn(name = "player_id"))
     @MapKeyColumn(name = "attribute_name")
+	@Enumerated(EnumType.STRING)
     @Column(name = "attribute_value")
     private Map<MentalAttribute, Integer> mentalAttributes = new EnumMap<>(MentalAttribute.class);
 	
@@ -86,6 +91,7 @@ public class Player implements Serializable {
 	@ElementCollection
     @CollectionTable(name = "physical_attributes", joinColumns = @JoinColumn(name = "player_id"))
     @MapKeyColumn(name = "attribute_name")
+	@Enumerated(EnumType.STRING)
     @Column(name = "attribute_value")
     private Map<PhysicalAttribute, Integer> physicalAttributes = new EnumMap<>(PhysicalAttribute.class);
 		
