@@ -9,5 +9,4 @@ public enum PhysicalAttribute {
     STRENGTH,
     STAMINA,
     FITNESS;
-
 }
