@@ -13,9 +13,9 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "nations")
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 public class Nation implements Serializable {
 
 	private static final long serialVersionUID = 1L;
