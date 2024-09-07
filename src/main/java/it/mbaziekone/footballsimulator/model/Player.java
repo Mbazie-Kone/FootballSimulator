@@ -67,7 +67,6 @@ public class Player implements Serializable {
 	@ElementCollection
 	@CollectionTable(name = "player_roles", joinColumns = @JoinColumn(name="player_id"))
 	@MapKeyColumn(name = "attribute_name")
-	@Enumerated(EnumType.STRING)
 	@Column(name = "attribute_value")
 	private Map<PlayerRole, Integer> roles = new EnumMap<>(PlayerRole.class);
 	
@@ -75,7 +74,6 @@ public class Player implements Serializable {
 	@ElementCollection
     @CollectionTable(name = "technical_attributes", joinColumns = @JoinColumn(name = "player_id"))
     @MapKeyColumn(name = "attribute_name")
-	@Enumerated(EnumType.STRING)
     @Column(name = "attribute_value")
     private Map<TechnicalAttribute, Integer> technicalAttributes = new EnumMap<>(TechnicalAttribute.class);
 	
@@ -90,7 +88,6 @@ public class Player implements Serializable {
 	@ElementCollection
     @CollectionTable(name = "physical_attributes", joinColumns = @JoinColumn(name = "player_id"))
     @MapKeyColumn(name = "attribute_name")
-	@Enumerated(EnumType.STRING)
     @Column(name = "attribute_value")
     private Map<PhysicalAttribute, Integer> physicalAttributes = new EnumMap<>(PhysicalAttribute.class);
 		
