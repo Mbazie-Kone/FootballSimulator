@@ -38,7 +38,7 @@ public class MainUI extends Application {
 		splashLayout.setStyle("-fx-background-color: black;");
 		
 		// Fade-in/fade-out animation
-		FadeTransition fadeIn = new FadeTransition(Duration.seconds(3), splashLayout);
+		FadeTransition fadeIn = new FadeTransition(Duration.seconds(20), splashLayout);
 		fadeIn.setFromValue(0.0);
 		fadeIn.setToValue(1.0);
 		fadeIn.setOnFinished(e -> {
