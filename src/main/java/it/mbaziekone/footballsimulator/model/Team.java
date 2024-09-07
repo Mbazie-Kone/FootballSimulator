@@ -31,37 +31,5 @@ public class Team implements Serializable {
 	
 	@OneToMany(mappedBy = "team")
 	private List<Player> players = new ArrayList<>();
-	
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Nation getNation() {
-		return nation;
-	}
-
-	public void setNation(Nation nation) {
-		this.nation = nation;
-	}
-
-	public List<Player> getPlayers() {
-		return players;
-	}
-
-	public void setPlayers(List<Player> players) {
-		this.players = players;
-	}
 
 }
