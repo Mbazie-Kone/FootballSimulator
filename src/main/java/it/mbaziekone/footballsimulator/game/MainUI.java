@@ -15,8 +15,7 @@ public class MainUI extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		
-		// Creation of the stack pane to contain the logo and the game name
-		StackPane splashLayout = new StackPane();
+		String videoPath = "";
 		
 		// game logo
 		Image logo = new Image("file:logo.png"); // "Insert the path to the logo"
