@@ -7,6 +7,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -16,6 +18,9 @@ public class MainUI extends Application {
 	public void start(Stage primaryStage) {
 		
 		String videoPath = "file:/videos/DemoIntro.mp4";
+		
+		Media media = new Media(videoPath);
+		MediaPlayer mediaPlayer = new MediaPlayer(media);
 		
 		// game logo
 		Image logo = new Image("file:logo.png"); // "Insert the path to the logo"
