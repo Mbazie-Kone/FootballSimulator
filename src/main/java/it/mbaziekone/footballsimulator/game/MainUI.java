@@ -32,6 +32,7 @@ public class MainUI extends Application {
 		//
 		mediaView.setPreserveRatio(true);
 		mediaView.setFitWidth(Screen.getPrimary().getBounds().getWidth());
+		mediaView.setFitHeight(Screen.getPrimary().getBounds().getWidth());
 			
 	}
 	
