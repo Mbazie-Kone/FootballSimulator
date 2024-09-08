@@ -39,6 +39,10 @@ public class MainUI extends Application {
 		
 		//
 		Scene scene = new Scene(root);
+		
+		//
+		primaryStage.setScene(scene);
+		primaryStage.setTitle("Football Simulator");
 			
 	}
 	
