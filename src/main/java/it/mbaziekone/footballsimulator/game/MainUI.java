@@ -10,6 +10,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -28,7 +29,9 @@ public class MainUI extends Application {
 		//
 		MediaView mediaView = new MediaView(mediaPlayer);
 		
-		
+		//
+		mediaView.setPreserveRatio(true);
+		mediaView.setFitWidth(Screen.getPrimary().getBounds().getWidth());
 			
 	}
 	
