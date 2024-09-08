@@ -15,7 +15,7 @@ public class MainUI extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		
-		String videoPath = "";
+		String videoPath = "file:/videos/DemoIntro.mp4";
 		
 		// game logo
 		Image logo = new Image("file:logo.png"); // "Insert the path to the logo"
