@@ -19,42 +19,42 @@ public class MainUI extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		
-		// Percorso del file video
+		// Path to the video file
 		String videoPath = getClass().getResource("/videos/DemoIntro.mp4").toExternalForm();
 		
-		// Carica il video
+		// Load the video
 		Media media = new Media(videoPath);
 		MediaPlayer mediaPlayer = new MediaPlayer(media);
 		
-		// Configura MediaView per visualizzare il video
+		// Configure MediaView to display the video
 		MediaView mediaView = new MediaView(mediaPlayer);
 		
-		// Imposta la risoluzione del video per adattarsi allo schermo
+		// Set video resolution to fit the screen
 		mediaView.setPreserveRatio(true);
 		mediaView.setFitWidth(Screen.getPrimary().getBounds().getWidth());
 		mediaView.setFitHeight(Screen.getPrimary().getBounds().getWidth());
 		
-		// Aggiungi il MediaView in un layout
+		// Add MediaView to the layout
 		StackPane root = new StackPane(mediaView);
 		
-		// Crea la scena
+		// Create the scene
 		Scene scene = new Scene(root);
 		
-		// Imposta la scena
+		// Set the scene
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Football Simulator");
 		
-		// Imposta la modalità a tutto schermo
-		primaryStage.setFullScreen(true); // Abilita il fullscreen
-		primaryStage.setFullScreenExitHint(null); // Nasconde il suggerimento per uscire dalla modalità fullscreen
+		// Enable fullscreen mode
+		primaryStage.setFullScreen(true); // Enable fullscreen
+		primaryStage.setFullScreenExitHint(null); // Hide the exit hint for fullscreen
 		
-		//
+		// Show the stage
 		primaryStage.show();
 		
-		//
+		// Start the video
 		mediaPlayer.play();
 		
-		//
+		// When the video ends, show the main menu
 		mediaPlayer
 			
 	}
