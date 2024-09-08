@@ -1,18 +1,13 @@
 package it.mbaziekone.footballsimulator.game;
 
-import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
 public class MainUI extends Application {
 
@@ -55,7 +50,7 @@ public class MainUI extends Application {
 		mediaPlayer.play();
 		
 		// When the video ends, show the main menu
-		mediaPlayer
+		mediaPlayer.setOnEndOfMedia(() -> showMainMenu(primaryStage));
 			
 	}
 	
