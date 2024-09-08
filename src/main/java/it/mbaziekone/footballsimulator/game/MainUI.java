@@ -43,6 +43,16 @@ public class MainUI extends Application {
 		//
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Football Simulator");
+		
+		//
+		primaryStage.setFullScreen(true); //
+		primaryStage.setFullScreenExitHint(null); //
+		
+		//
+		primaryStage.show();
+		
+		//
+		mediaPlayer.play();
 			
 	}
 	
