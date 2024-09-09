@@ -15,7 +15,7 @@ public class MainUI extends Application {
 	public void start(Stage primaryStage) {
 		
 		// Path to the video file
-		String videoPath = "file:/videos/DemoIntro.mp4";
+		String videoPath = getClass().getResource("/videos/DemoIntro.mp4").toExternalForm();
 		// Load the video
 		Media media = new Media(videoPath);
 		MediaPlayer mediaPlayer = new MediaPlayer(media);
