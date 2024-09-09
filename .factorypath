@@ -80,5 +80,7 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-base/24-ea+5/javafx-base-24-ea+5-win.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-graphics/24-ea+5/javafx-graphics-24-ea+5.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-graphics/24-ea+5/javafx-graphics-24-ea+5-win.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-media/24-ea+5/javafx-media-24-ea+5.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-media/24-ea+5/javafx-media-24-ea+5-win.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="PLUGIN" id="org.eclipse.jst.ws.annotations.core" enabled="false" runInBatchMode="false"/>
 </factorypath>
