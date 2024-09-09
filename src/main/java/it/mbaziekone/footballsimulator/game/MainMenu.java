@@ -35,7 +35,7 @@ public class MainMenu extends Application {
 		menuLayout.getChildren().addAll(newGameButton, continueButton, settingsButton);
 		
 		// "Creation of the main menu scene"
-		Scene menuScene = new Scene(menuLayout);
+		Scene menuScene = new Scene(menuLayout, 1920, 1080);
 		
 		// "Set the scene on the stage"
 		primaryStage.setScene(menuScene);
