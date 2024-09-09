@@ -59,8 +59,11 @@ public class MainUI extends Application {
             }
         });
 		
-		// When the video ends, show the main menu
-		mediaPlayer.setOnEndOfMedia(() -> showMainMenu(primaryStage));
+		// When the video ends, show the main menu and enable "Esc" functionality
+		mediaPlayer.setOnEndOfMedia(() -> {
+			isVideoPlaying = false; // Video has finished playing	
+			showMainMenu(primaryStage);
+		});
 		
 		// Handle errors during video playback
         mediaPlayer.setOnError(() -> {
