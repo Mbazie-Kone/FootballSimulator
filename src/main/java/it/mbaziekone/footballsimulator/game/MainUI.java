@@ -10,6 +10,8 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class MainUI extends Application {
+	
+	private boolean isVideoPlaying = true; // flag to indicate if the videos is playing
 
 	@Override
 	public void start(Stage primaryStage) {
