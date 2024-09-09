@@ -40,7 +40,7 @@ public class MainUI extends Application {
 		StackPane root = new StackPane(mediaView);
 		
 		// Create the scene
-		Scene scene = new Scene(root, 1920, 1080);
+		Scene scene = new Scene(root);
 		
 		// Set the scene
 		primaryStage.setScene(scene);
