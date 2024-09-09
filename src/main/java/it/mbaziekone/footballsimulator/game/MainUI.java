@@ -48,7 +48,7 @@ public class MainUI extends Application {
 		
 		// Enable fullscreen mode
 		primaryStage.setFullScreen(true); // Enable fullscreen
-		primaryStage.setFullScreenExitHint(null); // Hide the exit hint for fullscreen
+		primaryStage.setFullScreenExitHint(""); // Empty string to hide the hint
 		
 		// Show the stage
 		primaryStage.show();
