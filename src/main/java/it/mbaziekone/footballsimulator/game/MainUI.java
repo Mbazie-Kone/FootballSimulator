@@ -15,7 +15,15 @@ public class MainUI extends Application {
 	public void start(Stage primaryStage) {
 		
 		// Path to the video file
-		String videoPath = getClass().getResource("/videos/DemoIntro.mp4").toExternalForm();
+		String videoPath = null;
+		
+		try {
+		    videoPath = getClass().getResource("/videos/DemoIntro.mp4").toExternalForm();
+		} catch (NullPointerException e) {
+		    System.err.println("Video file not found! Check the path and ensure it's in the classpath.");
+		    return; // Exit the application or handle the error appropriately
+		}
+		
 		// Load the video
 		Media media = new Media(videoPath);
 		MediaPlayer mediaPlayer = new MediaPlayer(media);
