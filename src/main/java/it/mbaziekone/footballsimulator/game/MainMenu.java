@@ -55,8 +55,8 @@ public class MainMenu extends Application {
                 primaryStage.setFullScreen(false);  // Exit fullscreen
 
                 // Adapt the window to the screen size
-                primaryStage.setWidth(Screen.getPrimary().getBounds().getWidth());  // Set width to 80% of screen
-                primaryStage.setHeight(Screen.getPrimary().getBounds().getHeight()); // Set height to 80% of screen
+                primaryStage.setWidth(Screen.getPrimary().getBounds().getWidth() * 0.9);  // Set width to 90% of screen
+                primaryStage.setHeight(Screen.getPrimary().getBounds().getHeight() * 0.9); // Set height to 90% of screen
                 primaryStage.centerOnScreen();  // Center the window on the screen
          
             }
