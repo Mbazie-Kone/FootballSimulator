@@ -52,10 +52,7 @@ public class MainMenu extends Application {
 		// "Set the scene on the stage"
 		primaryStage.setScene(menuScene);
 		primaryStage.setFullScreen(true); // Keep the game fullscreen
-		
-		// Ensure fullscreen is maintained
-        primaryStage.setFullScreen(true);
-        primaryStage.setFullScreenExitHint(""); // Empty string to hide the hint
+        primaryStage.setFullScreenExitHint(""); // Hide the "Press Esc to exit fullscreen" hint
         
         // Add an event listener for the "Esc" key to exit fullscreen
         menuScene.setOnKeyPressed(event -> {
