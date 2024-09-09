@@ -60,19 +60,7 @@ public class MainMenu extends Application {
                 primaryStage.centerOnScreen();  // Center the window on the screen
             }
         });
-        
-        // Add an event listener for the "Esc" key to exit fullscreen
-        menuScene.setOnKeyPressed(event -> {
-            if (event.getCode() == KeyCode.ESCAPE) {
-                primaryStage.setFullScreen(false);  // Exit fullscreen
 
-                // Adapt the window to the screen size
-                primaryStage.setWidth(Screen.getPrimary().getBounds().getWidth() * 0.8);  // Set width to 80% of screen
-                primaryStage.setHeight(Screen.getPrimary().getBounds().getHeight() * 0.8); // Set height to 80% of screen
-                primaryStage.centerOnScreen();  // Center the window on the screen
-            }
-        });
-        
 		primaryStage.show();
 	}
 	
