@@ -38,14 +38,14 @@ public class MainUI extends Application {
 		mediaView.setFitWidth(Screen.getPrimary().getBounds().getWidth());
 		mediaView.setFitHeight(Screen.getPrimary().getBounds().getHeight());
 		
-		// Add MediaView to the layout
+		// Create a layout for the video
 		StackPane videoLayout = new StackPane(mediaView);
 		Scene videoScene = new Scene(videoLayout);
 		
 		// Set the scene and enable fullscreen mode
 		primaryStage.setScene(videoScene);
 		primaryStage.setFullScreen(true); // Enable fullscreen
-		primaryStage.setFullScreenExitHint(""); // Empty string to hide the hint
+		primaryStage.setFullScreenExitHint(""); // Hide the "Press Esc to exit fullscreen" hint
 		
 		// Start the video
 		mediaPlayer.play();
