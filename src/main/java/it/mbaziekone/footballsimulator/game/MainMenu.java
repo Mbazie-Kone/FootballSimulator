@@ -61,8 +61,7 @@ public class MainMenu extends Application {
 
 				// Adapt the window to the screen size
 				primaryStage.setWidth(Screen.getPrimary().getBounds().getWidth() * 0.9); // Set width to 90% of screen
-				primaryStage.setHeight(Screen.getPrimary().getBounds().getHeight() * 0.9); // Set height to 90% of
-																							// screen
+				primaryStage.setHeight(Screen.getPrimary().getBounds().getHeight() * 0.9); // Set height to 90% of screen
 				primaryStage.centerOnScreen(); // Center the window on the screen
 
 			}
@@ -76,7 +75,6 @@ public class MainMenu extends Application {
 			}
 		});
 
-		// primaryStage.show();
 	}
 
 	// Method to start a new game
