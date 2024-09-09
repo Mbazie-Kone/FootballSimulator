@@ -37,6 +37,11 @@ public class MainMenu extends Application {
 		settingsButton.setPrefWidth(200);
 		settingsButton.setOnAction(e -> openSettings(primaryStage));
 		
+		// Button to exit the game
+        Button exitButton = new Button("Exit Game");
+        exitButton.setPrefWidth(200);
+        exitButton.setOnAction(e -> exitGame());
+		
 		// "Add all buttons to the layout"
 		menuLayout.getChildren().addAll(newGameButton, continueButton, settingsButton);
 		
