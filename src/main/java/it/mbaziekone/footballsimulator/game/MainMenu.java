@@ -44,7 +44,7 @@ public class MainMenu extends Application {
         exitButton.setOnAction(e -> exitGame());
 		
 		// "Add all buttons to the layout"
-		menuLayout.getChildren().addAll(newGameButton, continueButton, settingsButton);
+		menuLayout.getChildren().addAll(newGameButton, continueButton, settingsButton, exitButton);
 		
 		// "Creation of the main menu scene"
 		Scene menuScene = new Scene(menuLayout);
