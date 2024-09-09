@@ -77,9 +77,9 @@ public class MainUI extends Application {
 	
 	// Method to show the main menu after the video
 	public void showMainMenu(Stage primaryStage) {
+		// Transition to MainMenu after video ends
 		MainMenu mainMenu = new MainMenu();
-		primaryStage.setFullScreen(true); // Disable fullscreen if desired
-		mainMenu.start(primaryStage); // Show the main menu
+		mainMenu.start(primaryStage);
 	}
 	
 	public static void main(String[] args) {
