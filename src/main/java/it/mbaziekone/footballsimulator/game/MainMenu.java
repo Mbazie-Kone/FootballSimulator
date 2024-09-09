@@ -1,6 +1,7 @@
 package it.mbaziekone.footballsimulator.game;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -97,7 +98,12 @@ public class MainMenu extends Application {
     private void openSettings(Stage primaryStage) {
         // Code to open the settings menu
         
-     
+    
+    }
+    
+    // Method to exit the game
+    private void exitGame() {
+        Platform.exit();  // Closes the application
     }
 
     public static void main(String[] args) {
