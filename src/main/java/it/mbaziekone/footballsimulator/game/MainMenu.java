@@ -51,6 +51,7 @@ public class MainMenu extends Application {
 		
 		// "Set the scene on the stage"
 		primaryStage.setScene(menuScene);
+		primaryStage.setFullScreen(true); // Keep the game fullscreen
 		
 		// Ensure fullscreen is maintained
         primaryStage.setFullScreen(true);
