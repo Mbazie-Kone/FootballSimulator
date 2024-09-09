@@ -39,16 +39,11 @@ public class MainUI extends Application {
 		mediaView.setFitHeight(Screen.getPrimary().getBounds().getHeight());
 		
 		// Add MediaView to the layout
-		StackPane root = new StackPane(mediaView);
+		StackPane videoLayout = new StackPane(mediaView);
+		Scene videoScene = new Scene(videoLayout);
 		
-		// Create the scene
-		Scene scene = new Scene(root);
-		
-		// Set the scene
-		primaryStage.setScene(scene);
-		primaryStage.setTitle("Football Simulator");
-		
-		// Enable fullscreen mode
+		// Set the scene and enable fullscreen mode
+		primaryStage.setScene(videoScene);
 		primaryStage.setFullScreen(true); // Enable fullscreen
 		primaryStage.setFullScreenExitHint(""); // Empty string to hide the hint
 		
