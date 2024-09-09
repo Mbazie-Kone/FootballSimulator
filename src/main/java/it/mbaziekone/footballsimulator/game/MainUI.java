@@ -50,11 +50,16 @@ public class MainUI extends Application {
 		primaryStage.setFullScreen(true); // Enable fullscreen
 		primaryStage.setFullScreenExitHint(""); // Empty string to hide the hint
 		
-		// Show the stage
-		primaryStage.show();
-		
 		// Start the video
 		mediaPlayer.play();
+		
+		// Disable "Esc" key while video is playing
+        videoScene.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ESCAPE && !isVideoPlaying) {
+                // Allow "Esc" key to exit fullscreen only after the video ends
+                primaryStage.setFullScreen(false);
+            }
+        });
 		
 		// When the video ends, show the main menu
 		mediaPlayer.setOnEndOfMedia(() -> showMainMenu(primaryStage));
@@ -63,6 +68,9 @@ public class MainUI extends Application {
         mediaPlayer.setOnError(() -> {
             System.err.println("Error occurred while playing the video: " + mediaPlayer.getError().getMessage());
         });
+        
+    	// Show the stage
+		primaryStage.show();
 			
 	}
 	
