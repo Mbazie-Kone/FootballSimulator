@@ -58,6 +58,11 @@ public class MainUI extends Application {
 		
 		// When the video ends, show the main menu
 		mediaPlayer.setOnEndOfMedia(() -> showMainMenu(primaryStage));
+		
+		// Handle errors during video playback
+        mediaPlayer.setOnError(() -> {
+            System.err.println("Error occurred while playing the video: " + mediaPlayer.getError().getMessage());
+        });
 			
 	}
 	
