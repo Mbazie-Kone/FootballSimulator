@@ -34,7 +34,7 @@ public class MainUI extends Application {
 		// Set video resolution to fit the screen
 		mediaView.setPreserveRatio(true);
 		mediaView.setFitWidth(Screen.getPrimary().getBounds().getWidth());
-		mediaView.setFitHeight(Screen.getPrimary().getBounds().getWidth());
+		mediaView.setFitHeight(Screen.getPrimary().getBounds().getHeight());
 		
 		// Add MediaView to the layout
 		StackPane root = new StackPane(mediaView);
