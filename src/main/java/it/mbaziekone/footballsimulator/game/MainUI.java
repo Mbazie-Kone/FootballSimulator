@@ -45,6 +45,7 @@ public class MainUI extends Application {
 		
 		// Set the scene and enable fullscreen mode
 		primaryStage.setScene(videoScene);
+		primaryStage.setTitle("Football Simulator");
 		primaryStage.setFullScreen(true); // Enable fullscreen
 		primaryStage.setFullScreenExitHint(""); // Hide the "Press Esc to exit fullscreen" hint
 		
