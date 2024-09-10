@@ -40,7 +40,7 @@ public class MainMenu extends Application {
 		Button settingsButton = new Button("Settings");
 		settingsButton.setPrefWidth(200);
 		settingsButton.setOnAction(e -> openSettings(primaryStage));
-		 styleButton(settingsButton);  // Apply the style to the button
+		styleButton(settingsButton);  // Apply the style to the button
 
 		// Button to exit the game
 		Button exitButton = new Button("Exit Game");
@@ -53,6 +53,7 @@ public class MainMenu extends Application {
 
 		// "Creation of the main menu scene"
 		Scene menuScene = new Scene(menuLayout);
+		menuScene.getStylesheets().add(getClass().getResource("/styles/menu.css").toExternalForm()); // Link CSS file
 
 		// "Set the scene on the stage"
 		primaryStage.setScene(menuScene);
@@ -79,8 +80,17 @@ public class MainMenu extends Application {
 				primaryStage.setFullScreen(true);
 			}
 		});
+		
+		primaryStage.show();
 
 	}
+	
+	// Apply consistent style to the buttons
+    private void styleButton(Button button) {
+        button.setStyle("-fx-font-size: 18px; -fx-background-color: #34495e; -fx-text-fill: white; -fx-pref-width: 200px; -fx-pref-height: 50px;");
+        button.setOnMouseEntered(e -> button.setStyle("-fx-font-size: 18px; -fx-background-color: #1abc9c; -fx-text-fill: white; -fx-pref-width: 200px; -fx-pref-height: 50px;"));
+        button.setOnMouseExited(e -> button.setStyle("-fx-font-size: 18px; -fx-background-color: #34495e; -fx-text-fill: white; -fx-pref-width: 200px; -fx-pref-height: 50px;"));
+    }
 
 	// Method to start a new game
 	private void startNewGame(Stage primaryStage) {
@@ -104,6 +114,8 @@ public class MainMenu extends Application {
 	private void exitGame() {
 		Platform.exit(); // Closes the application
 	}
+	
+	
 
 	public static void main(String[] args) {
 		launch(args);
