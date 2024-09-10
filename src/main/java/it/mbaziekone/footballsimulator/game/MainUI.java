@@ -49,10 +49,9 @@ public class MainUI extends Application {
 		primaryStage.setFullScreenExitHint(""); // Hide the "Press Esc to exit fullscreen" hint
 		
 		// Disable "Esc" key while video is playing
-        videoScene.setOnKeyPressed(event -> {
-            if (event.getCode() == KeyCode.ESCAPE && !isVideoPlaying) {
-                // Allow "Esc" key to exit fullscreen only after the video ends
-                primaryStage.setFullScreen(false);
+        primaryStage.addEventFilter(javafx.scene.input.KeyEvent.KEY_PRESSED, event -> {
+            if (event.getCode() == KeyCode.ESCAPE && isVideoPlaying) {
+                event.consume(); // Prevent the "Esc" key from exiting fullscreen while video is playing
             }
         });
         
