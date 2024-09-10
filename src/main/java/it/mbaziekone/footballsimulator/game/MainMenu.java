@@ -18,6 +18,7 @@ public class MainMenu extends Application {
 		// "Main layout (VBox with center alignment)"
 		VBox menuLayout = new VBox(20);
 		menuLayout.setAlignment(Pos.CENTER);
+		menuLayout.setStyle("-fx-padding: 40px; -fx-background-color: #2c3e50;"); // Add padding and background color
 
 		// Ensure VBox takes the full size of the window
 		menuLayout.setPrefWidth(Double.MAX_VALUE);
@@ -27,20 +28,24 @@ public class MainMenu extends Application {
 		Button newGameButton = new Button("New Game");
 		newGameButton.setPrefWidth(200);
 		newGameButton.setOnAction(e -> startNewGame(primaryStage));
+		styleButton(newGameButton);  // Apply the style to the button
 
 		// Button to continue a previous game
 		Button continueButton = new Button("Continue");
 		continueButton.setPrefWidth(200);
 		continueButton.setOnAction(e -> continueGame(primaryStage));
+		styleButton(continueButton);  // Apply the style to the button
 
 		// Button for settings
 		Button settingsButton = new Button("Settings");
 		settingsButton.setPrefWidth(200);
 		settingsButton.setOnAction(e -> openSettings(primaryStage));
+		 styleButton(settingsButton);  // Apply the style to the button
 
 		// Button to exit the game
 		Button exitButton = new Button("Exit Game");
 		exitButton.setPrefWidth(200);
+		styleButton(exitButton);  // Apply the style to the button
 		exitButton.setOnAction(e -> exitGame());
 
 		// "Add all buttons to the layout"
